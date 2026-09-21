@@ -1,0 +1,339 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: light;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Image animations for Header & Footer */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(-1.5deg);
+  }
+}
+
+@keyframes shimmer-glow {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(12px) scale(0.85);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-16px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-bubble-1 {
+  animation: bubble-rise 3.2s ease-in-out infinite;
+}
+
+.animate-bubble-2 {
+  animation: bubble-rise 4.1s ease-in-out infinite 0.7s;
+}
+
+.animate-bubble-3 {
+  animation: bubble-rise 3.6s ease-in-out infinite 1.4s;
+}
+
+.animate-shimmer-glow {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer-glow 3s infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes light-beam {
+  0% {
+    transform: rotate(-12deg) translateX(-15%);
+    opacity: 0.25;
+  }
+  50% {
+    transform: rotate(-4deg) translateX(15%);
+    opacity: 0.55;
+  }
+  100% {
+    transform: rotate(-12deg) translateX(-15%);
+    opacity: 0.25;
+  }
+}
+
+@keyframes bubble-drift {
+  0% {
+    transform: translateY(100%) translateX(0px) scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(40%) translateX(18px) scale(1);
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20%) translateX(-12px) scale(1.15);
+    opacity: 0;
+  }
+}
+
+.animate-light-beam {
+  animation: light-beam 12s ease-in-out infinite;
+}
+
+.animate-bubble-drift-1 {
+  animation: bubble-drift 7s ease-in-out infinite;
+}
+
+.animate-bubble-drift-2 {
+  animation: bubble-drift 9.5s ease-in-out infinite 1.8s;
+}
+
+.animate-bubble-drift-3 {
+  animation: bubble-drift 8.2s ease-in-out infinite 3.5s;
+}
+
+.animate-bubble-drift-4 {
+  animation: bubble-drift 11s ease-in-out infinite 5s;
+}
+
+.animate-bubble-drift-5 {
+  animation: bubble-drift 8.8s ease-in-out infinite 2.2s;
+}
+
+.animate-bubble-drift-6 {
+  animation: bubble-drift 10.2s ease-in-out infinite 4.2s;
+}
+
+/* Glass Clean Motion Graphic Keyframes */
+@keyframes neon-border-pulse {
+  0% {
+    border-color: rgba(6, 182, 212, 0.7);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), 0 0 35px rgba(59, 130, 246, 0.25), inset 0 0 20px rgba(6, 182, 212, 0.15);
+  }
+  33% {
+    border-color: rgba(168, 85, 247, 0.7);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 45px rgba(236, 72, 153, 0.25), inset 0 0 25px rgba(168, 85, 247, 0.15);
+  }
+  66% {
+    border-color: rgba(245, 158, 11, 0.7);
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.4), 0 0 40px rgba(16, 185, 129, 0.25), inset 0 0 20px rgba(245, 158, 11, 0.15);
+  }
+  100% {
+    border-color: rgba(6, 182, 212, 0.7);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), 0 0 35px rgba(59, 130, 246, 0.25), inset 0 0 20px rgba(6, 182, 212, 0.15);
+  }
+}
+
+@keyframes glass-sheen {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0.8;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes prism-facet-rotate {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  33% {
+    transform: rotate(12deg) scale(1.08) translate(15px, -10px);
+  }
+  66% {
+    transform: rotate(-8deg) scale(0.95) translate(-10px, 12px);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+}
+
+@keyframes spark-drift {
+  0% {
+    transform: translateY(120%) scale(0.4) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.9;
+    transform: translateY(80%) scale(1.1) rotate(90deg);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(40%) scale(0.8) rotate(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(10%) scale(1.2) rotate(270deg);
+  }
+  100% {
+    transform: translateY(-30%) scale(0.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes beam-pulse-color {
+  0% {
+    filter: hue-rotate(0deg) blur(40px);
+    opacity: 0.35;
+  }
+  50% {
+    filter: hue-rotate(60deg) blur(50px);
+    opacity: 0.65;
+  }
+  100% {
+    filter: hue-rotate(0deg) blur(40px);
+    opacity: 0.35;
+  }
+}
+
+.animate-neon-box {
+  animation: neon-border-pulse 5s ease-in-out infinite;
+}
+
+.animate-glass-sheen {
+  animation: glass-sheen 6.5s ease-in-out infinite;
+}
+
+.animate-prism-1 {
+  animation: prism-facet-rotate 18s ease-in-out infinite;
+}
+
+.animate-prism-2 {
+  animation: prism-facet-rotate 24s ease-in-out infinite reverse;
+}
+
+.animate-prism-3 {
+  animation: prism-facet-rotate 15s ease-in-out infinite 3s;
+}
+
+.animate-spark-1 {
+  animation: spark-drift 6s ease-in-out infinite;
+}
+
+.animate-spark-2 {
+  animation: spark-drift 8s ease-in-out infinite 1.5s;
+}
+
+.animate-spark-3 {
+  animation: spark-drift 7.5s ease-in-out infinite 3s;
+}
+
+.animate-spark-4 {
+  animation: spark-drift 9s ease-in-out infinite 4.2s;
+}
+
+.animate-spark-5 {
+  animation: spark-drift 6.8s ease-in-out infinite 2s;
+}
+
+.animate-beam-color {
+  animation: beam-pulse-color 10s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

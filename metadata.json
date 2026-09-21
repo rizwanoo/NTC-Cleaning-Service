@@ -1,0 +1,6 @@
+{
+  "name": "Sunshine Shine Cleaning Co.",
+  "description": "Now That’s Clean (NTC Cleaning Service) - Transparent base rates, Square Tap to Pay booking, and professional residential and commercial cleaning across Oakland County and Metro Detroit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
